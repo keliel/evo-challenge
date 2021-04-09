@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'evo-challenge';
+  avatar = 'assets/images/adult-beautiful-girl-blue.png';
 }
