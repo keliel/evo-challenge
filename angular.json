@@ -34,9 +34,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
-              },
               "src/styles/fonts/fonts.scss",
               "src/styles/main.scss"
             ],

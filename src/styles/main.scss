@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+// import configuration from the theme builder
+@import "~@progress/kendo-theme-default/scss/functions/_index.scss";
+@import "~@progress/kendo-theme-default/scss/_variables.scss";
+@import "~@progress/kendo-theme-default/scss/mixins/_index.scss";
+@import './variables';
+
+
+// Dependencies
+@import "~@progress/kendo-theme-default/scss/common/_index.scss";
+
+// Generic content
+@import "~@progress/kendo-theme-default/scss/styling/_index.scss";
+@import "~@progress/kendo-theme-default/scss/utils/_index.scss";
+@import "~@progress/kendo-theme-default/scss/typography/_index.scss";
+@import "~@progress/kendo-theme-default/scss/avatar/_index.scss";
+@import "~@progress/kendo-theme-default/scss/badge/_index.scss";
+// Command interfaces
+@import '~@progress/kendo-theme-default/scss/appbar/index';
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
