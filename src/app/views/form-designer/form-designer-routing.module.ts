@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormDesignerComponent } from './containers/form-designer/form-designer.component';
+import { FormDesignerComponent } from './form-designer.component';
 
 const routes: Routes = [
   {
