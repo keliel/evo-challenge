@@ -1,10 +1,16 @@
+@import '../styles/variables/font-sizes';
+@import '../styles/variables/spacings';
+@import '../styles/variables/colors';
+
 .title {
-  font-size: 18px;
+  font-size: $font-size-medium;
   margin: 0;
 }
+
 kendo-avatar {
-  margin-left: 8px;
+  margin-left: $gutter-half;
 }
+
 .k-button {
-  color: #80899b;
+  color: $icon-color;
 }
