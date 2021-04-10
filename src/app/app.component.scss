@@ -15,6 +15,9 @@ main {
 }
 
 kendo-appbar {
+  padding-left: $gutter-doubled + $gutter-half;
+  padding-right: $gutter-doubled;
+
   &.left-nav {
     display: flex;
     flex-direction: column;
@@ -37,6 +40,7 @@ kendo-appbar {
 
 .title {
   font-size: $font-size-medium;
+  font-weight: bold;
   margin: 0;
 }
 
