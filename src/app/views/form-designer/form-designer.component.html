@@ -1,2 +1,4 @@
-<p>form-designer works!</p>
+<kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
+                kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding>
+</kendo-treeview>
 <router-outlet></router-outlet>

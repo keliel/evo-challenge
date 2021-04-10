@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FormDesignerRoutingModule } from './form-designer-routing.module';
 import { FormDesignerComponent } from './form-designer.component';
+import { TreeViewModule } from '@progress/kendo-angular-treeview';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FormDesignerComponent } from './form-designer.component';
   ],
   imports: [
     CommonModule,
-    FormDesignerRoutingModule
+    FormDesignerRoutingModule,
+    TreeViewModule,
   ]
 })
 export class FormDesignerModule { }
