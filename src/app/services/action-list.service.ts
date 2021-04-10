@@ -37,6 +37,7 @@ export class ActionListService {
     {
       id: uuid(),
       title: 'Integrate clicks-and-mortar methodologies',
+      type: ActionPointType.Point,
       subactions: [{
         id: uuid(),
         title: 'Monetize B2B portals',

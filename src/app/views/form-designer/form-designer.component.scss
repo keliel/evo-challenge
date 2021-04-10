@@ -7,6 +7,8 @@
 @import '~@progress/kendo-theme-default/scss/variables';
 @import '~@progress/kendo-theme-default/scss/functions/colors';
 
+$bg-color-item: #f4f9fd;
+
 .action-list-wrapper {
   width: 24%;
   min-width: 432px;
@@ -17,11 +19,16 @@
 
 .action-point {
   &__icon {
+    font-size: $font-size-default;
     margin-right: $gutter-half;
   }
 
   &--last {
     margin-left: $gutter-one-and-half;
+  }
+
+  &--disabled {
+    color: #d0d3dd;
   }
 }
 
@@ -29,6 +36,18 @@
   .k-i-expand,
   .k-i-collapse {
     margin-left: $gutter-base;
+    color: $primary;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: $font-size-small;
+  }
+
+  .k-i-expand:before {
+    content: '\f054'; // Hardcoded, should be replaced by variable from some official package
+  }
+
+  .k-i-collapse:before {
+    content: '\f078'; // Hardcoded, should be replaced by variable from some official package
   }
 
   .k-mid {
@@ -56,9 +75,9 @@
   }
 
   &[aria-level='1'] {
-    &:nth-child(odd) {
+    &:nth-child(even) {
       > .k-mid {
-        background-color: try-lighten($primary-lighter, 5);
+        background-color: $bg-color-item;
       }
 
       [aria-level='2'] {
@@ -68,7 +87,7 @@
             &:nth-child(even),
             &:nth-child(odd) {
               > .k-mid {
-                background-color: try-lighten($primary-lighter, 3);
+                background-color: $bg-color-item;
               }
             }
           }
@@ -76,12 +95,12 @@
       }
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       [aria-level='2'] {
         &:nth-child(even),
         &:nth-child(odd) {
           > .k-mid {
-            background-color: try-lighten($primary-lighter, 3);
+            background-color: $bg-color-item;
           }
 
           [aria-level='3'] {
@@ -91,7 +110,7 @@
                 &:nth-child(even),
                 &:nth-child(odd) {
                   > .k-mid {
-                    background-color: try-lighten($primary-lighter, 3);
+                    background-color: $bg-color-item;
                   }
                 }
               }

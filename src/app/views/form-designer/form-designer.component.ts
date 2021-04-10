@@ -1,7 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ActionListService } from '../../services/action-list.service';
-import { faClipboardList, faCodeBranch, faDotCircle, faFlag, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList, faCodeBranch, faDotCircle, faFlag, faLock, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { ActionPointType } from '../../core/models/action-point-type.enum';
+import { ActionPoint } from '../../core/models/action-point';
 
 @Component({
   templateUrl: './form-designer.component.html',
@@ -14,8 +15,15 @@ export class FormDesignerComponent {
 
   constructor(private readonly actionListService: ActionListService) { }
 
-  getTypeIcon(nodeType: ActionPointType): IconDefinition {
-    switch (nodeType) {
+  displayExtraIcon(item: ActionPoint): boolean {
+    return item.secured || item.type !== undefined;
+  }
+
+  getTypeIcon(item: ActionPoint): IconDefinition {
+    if (item.secured) {
+      return faLock;
+    }
+    switch (item.type) {
       case ActionPointType.Goal:
         return faFlag;
       case ActionPointType.Decision:
@@ -27,8 +35,11 @@ export class FormDesignerComponent {
     }
   }
 
-  getTypeColor(nodeType: ActionPointType): string {
-    switch (nodeType) {
+  getTypeColor(item: ActionPoint): string {
+    if (item.secured) {
+      return '#D0D3DD';
+    }
+    switch (item.type) {
       case ActionPointType.Goal:
         return '#AE80B2';
       case ActionPointType.Decision:
