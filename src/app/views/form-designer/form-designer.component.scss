@@ -53,6 +53,10 @@ $bg-color-item: #f4f9fd;
   .k-in {
     width: 100%;
     cursor: pointer;
+
+    &.k-state-focused{
+      z-index: initial;
+    }
   }
 }
 .k-item {
