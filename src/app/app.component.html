@@ -1,29 +1,39 @@
+<kendo-appbar class="top-nav avoid-left-nav" position="top" positionMode="fixed">
+  <kendo-appbar-section>
+    <h1 class="title">Form Designer</h1>
+  </kendo-appbar-section>
 
-        <kendo-appbar [position]="'top'">
-          <kendo-appbar-section>
-              <button class="k-button k-button-clear">
-                MENU
-              </button>
-          </kendo-appbar-section>
+  <kendo-appbar-spacer></kendo-appbar-spacer>
 
-          <kendo-appbar-section>
-              <h1 class="title">Form Designer</h1>
-          </kendo-appbar-section>
+  <kendo-appbar-section class="actions">
+    <kendo-badge-container>
+      <button class="k-button k-button-clear with-icon">
+        <fa-icon [icon]="notificationIcon" size="lg"></fa-icon>
+      </button>
+      <kendo-badge shape="rounded" themeColor="tertiary" size="medium">8</kendo-badge>
+    </kendo-badge-container>
+  </kendo-appbar-section>
 
-          <kendo-appbar-spacer></kendo-appbar-spacer>
-
-          <kendo-appbar-section class="actions">
-              <kendo-badge-container>
-                  <button class="k-button k-button-clear">
-                      T
-                  </button>
-                  <kendo-badge [shape]="'dot'" [themeColor]="'warning'" [size]="'small'" [position]="'inside'">8</kendo-badge>
-              </kendo-badge-container>
-              <span class="k-appbar-separator"></span>
-          </kendo-appbar-section>
-
-          <kendo-appbar-section>
-              <kendo-avatar [imageSrc]="avatar" [shape]="'circle'" [width]="'26px'" [height]="'26px'"></kendo-avatar>
-          </kendo-appbar-section>
-      </kendo-appbar>
-<router-outlet></router-outlet>
+  <kendo-appbar-section>
+    <kendo-avatar [imageSrc]="avatar" shape="circle" width="32" height="32"></kendo-avatar>
+  </kendo-appbar-section>
+</kendo-appbar>
+<kendo-appbar class="left-nav" position="top" positionMode="fixed">
+  <kendo-appbar-section>
+    <button class="k-button brand">
+      TTG
+    </button>
+  </kendo-appbar-section>
+  <ng-container *ngFor="let item of leftHandNav">
+    <kendo-appbar-section>
+      <button class="k-button with-icon"
+        [ngClass]="{'primary': item.hasUpdates, 'muted': item.muted}"
+        [routerLink]="item.link" routerLinkActive="selected" >
+        <fa-icon [icon]="item.icon"></fa-icon>
+      </button>
+    </kendo-appbar-section>
+  </ng-container>
+</kendo-appbar>
+<main class="avoid-left-nav">
+  <router-outlet></router-outlet>
+</main>

@@ -4,7 +4,7 @@ import { ActionPointViewComponent } from './action-point-view.component';
 import { ActionPointOverviewComponent } from './containers/action-point-overview/action-point-overview.component';
 
 const routes: Routes = [{
-  path: '',
+  path: ':id',
   component: ActionPointViewComponent,
   children: [{
     path: 'overview',

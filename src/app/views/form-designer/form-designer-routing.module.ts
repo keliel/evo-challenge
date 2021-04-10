@@ -4,7 +4,7 @@ import { FormDesignerComponent } from './form-designer.component';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: '',
     component: FormDesignerComponent,
     loadChildren: () => import('../action-point-view/action-point-view.module').then(m => m.ActionPointViewModule)
   },

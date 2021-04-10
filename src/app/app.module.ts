@@ -10,6 +10,9 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormDesignerModule } from './views/form-designer/form-designer.module';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { FormDesignerModule } from './views/form-designer/form-designer.module';
     InputsModule,
     IndicatorsModule,
     FormDesignerModule,
+    ButtonsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

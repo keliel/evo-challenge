@@ -1,0 +1,97 @@
+@import '../styles/variables/font-sizes';
+@import '../styles/variables/spacings';
+@import '../styles/variables/colors';
+
+// Command interfaces
+@import '~@progress/kendo-theme-default/scss/appbar/index';
+
+$nav-size: 48;
+$nav-size-px: $nav-size + px;
+
+main {
+  background-color: $bg-color-inner;
+  padding: $nav-size-px 0 0 $nav-size-px;
+}
+
+.avoid-left-nav {
+  left: $nav-size-px;
+  max-width: calc(100% - #{$nav-size-px});
+}
+
+kendo-appbar {
+  &.left-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 0;
+    right: auto;
+    width: $nav-size-px;
+    min-width: (100 / 1920 * $nav-size) + vw;
+    padding: 0;
+    gap: 0;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.16);
+  }
+
+  &.top-nav {
+    width: calc(100% - #{$nav-size-px});
+    height: $nav-size-px;
+    min-height: (100 / 1080 * $nav-size) + vh;
+  }
+}
+
+.title {
+  font-size: $font-size-medium;
+  margin: 0;
+}
+
+kendo-badge {
+  font-weight: 500;
+}
+
+kendo-avatar {
+  margin-left: $gutter-base;
+}
+
+.k-button {
+  color: $icon-color;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+
+  .left-nav & {
+    height: $nav-size-px;
+    width: $nav-size-px;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.brand {
+    background: $tertiary;
+    color: $tertiary-contrast;
+  }
+
+  &.with-icon {
+    font-size: $font-size-icon;
+    padding: 0;
+  }
+
+  &.muted {
+    background: $disabled-color;
+  }
+
+  &.primary {
+    background: $primary-lighter;
+    color: $primary;
+
+    &.selected {
+      background: $primary;
+      color: $primary-contrast;
+    }
+  }
+}
