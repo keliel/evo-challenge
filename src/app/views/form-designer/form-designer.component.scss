@@ -20,11 +20,11 @@ $bg-color-item: #f4f9fd;
 .action-point {
   &__icon {
     font-size: $font-size-default;
-    margin-right: $gutter-half;
+    margin-right: $gutter-quarter;
   }
 
   &--last {
-    margin-left: $gutter-one-and-half;
+    margin-left: $gutter-one-and-three-quarters;
   }
 
   &--disabled {
