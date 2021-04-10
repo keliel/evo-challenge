@@ -36,9 +36,6 @@ export class FormDesignerComponent {
   }
 
   getTypeColor(item: ActionPoint): string {
-    if (item.secured) {
-      return '#D0D3DD';
-    }
     switch (item.type) {
       case ActionPointType.Goal:
         return '#AE80B2';
@@ -46,9 +43,15 @@ export class FormDesignerComponent {
         return '#22ACD4';
       case ActionPointType.Task:
         return '#596396';
-      default:
+      case ActionPointType.Point:
         return '#4088BF';
+      default:
+        return 'inherit';
     }
+  }
+
+  isNodeDisabled(item: any): boolean {
+    return !!item.secured;
   }
 
 }
