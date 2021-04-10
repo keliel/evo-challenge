@@ -1,4 +1,11 @@
-<kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
-                kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding>
-</kendo-treeview>
+<aside class="action-list-wrapper">
+  <kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
+                  kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding>
+    <ng-template kendoTreeViewNodeTemplate let-item>
+      <fa-icon *ngIf="item.type !== undefined" class="action-type-icon"
+               [icon]="getTypeIcon(item.type)" [style]="{color: getTypeColor(item.type)}"></fa-icon>
+      {{ item.title }}
+    </ng-template>
+  </kendo-treeview>
+</aside>
 <router-outlet></router-outlet>

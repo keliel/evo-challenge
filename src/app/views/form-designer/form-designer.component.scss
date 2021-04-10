@@ -1,0 +1,85 @@
+@import '~src/styles/variables/font-sizes';
+@import '~src/styles/variables/spacings';
+@import '~src/styles/variables/colors';
+
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
+@import '~@progress/kendo-theme-default/scss/functions/colors';
+
+.action-list-wrapper {
+  background-color: $white;
+  padding: ($gutter-doubled + $gutter-half) $gutter-one-and-half;
+}
+
+.action-type-icon {
+  margin-right: $gutter-half;
+}
+
+.k-treeview {
+  .k-i-expand,
+  .k-i-collapse {
+    margin-left: $gutter-half;
+  }
+}
+.k-item {
+  .k-treeview & {
+    padding: 0;
+  }
+
+  &[aria-level='1'] {
+    &:nth-child(odd) {
+      background-color: try-lighten($primary-lighter, 5);
+
+      [aria-level='2']:nth-child(odd),
+      [aria-level='2']:nth-child(even) {
+        background-color: $white;
+        .k-treeview & {
+          padding: 0 0 0 $gutter-half;
+        }
+
+        [aria-level='3']:nth-child(even),
+        [aria-level='3']:nth-child(odd) {
+          background-color: try-lighten($primary-lighter, 3);
+          .k-treeview & {
+            margin: 0 0 0 $gutter-half;
+          }
+
+          [aria-level='4']:nth-child(odd),
+          [aria-level='4']:nth-child(even) {
+            background-color: $white;
+            .k-treeview & {
+              padding: 0 0 0 $gutter-doubled;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $white;
+
+      [aria-level='2']:nth-child(even),
+      [aria-level='2']:nth-child(odd) {
+        background-color: try-lighten($primary-lighter, 3);
+        .k-treeview & {
+          margin: 0 0 0 $gutter-half;
+        }
+
+        [aria-level='3']:nth-child(odd),
+        [aria-level='3']:nth-child(even) {
+          background-color: $white;
+          .k-treeview & {
+            padding: 0 0 0 $gutter-half;
+          }
+          [aria-level='4']:nth-child(even),
+          [aria-level='4']:nth-child(odd) {
+            background-color: try-lighten($primary-lighter, 3);
+            .k-treeview & {
+              margin: 0 0 0 $gutter-doubled;
+            }
+          }
+        }
+      }
+    }
+  }
+}

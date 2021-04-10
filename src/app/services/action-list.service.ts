@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { ActionPointType } from '../core/models/action-point-type.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,21 @@ export class ActionListService {
     {
       id: 'sdfsfsf',
       title: 'Visualize impactful mindshare',
-      subactions: []
+      subactions: [{
+        id: 'sdfwfsf',
+        title: 'Monetize B2B portals',
+        type: ActionPointType.Goal,
+        subactions: [{
+          id: 'sdfawfsf',
+          title: 'Streamline customized models',
+          type: ActionPointType.Decision,
+          subactions: [{
+            id: 'sdfawfadsf',
+            title: 'Architect ubiquitous deliverables',
+            type: ActionPointType.Task,
+          }]
+        }]
+      }]
     },
     {
       id: 'sdfsf1f',
@@ -18,6 +33,17 @@ export class ActionListService {
       subactions: [{
         id: 'sdfwfsf',
         title: 'Monetize B2B portals',
+        type: ActionPointType.Goal,
+        subactions: [{
+          id: 'sdfawfsf',
+          title: 'Streamline customized models',
+          type: ActionPointType.Decision,
+          subactions: [{
+            id: 'sdfawfadsf',
+            title: 'Architect ubiquitous deliverables',
+            type: ActionPointType.Task,
+          }]
+        }]
       }]
     },
   ];
