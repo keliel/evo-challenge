@@ -20,45 +20,18 @@
 </kendo-appbar>
 <kendo-appbar class="left-nav" position="top" positionMode="fixed">
   <kendo-appbar-section>
-    <button class="k-button tertiary">
+    <button class="k-button brand">
       TTG
     </button>
   </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button">
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button primary" disabled>
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button" disabled>
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button primary">
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button">
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button">
-      TTG
-    </button>
-  </kendo-appbar-section>
-  <kendo-appbar-section>
-    <button class="k-button">
-      TTG
-    </button>
-  </kendo-appbar-section>
+  <ng-container *ngFor="let item of leftHandNav">
+    <kendo-appbar-section>
+      <button class="k-button with-icon"
+        [ngClass]="{'selected': item.selected, 'primary': item.hasUpdates, 'muted': item.muted}">
+        <fa-icon [icon]="item.icon"></fa-icon>
+      </button>
+    </kendo-appbar-section>
+  </ng-container>
 </kendo-appbar>
 <main class="avoid-left-nav">
   <router-outlet></router-outlet>

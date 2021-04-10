@@ -63,23 +63,30 @@ kendo-avatar {
     width: $nav-size-px;
   }
 
-  &:disabled {
-    background: $disabled-color;
+  &:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.1);
   }
 
-  &.tertiary {
+  &.brand {
     background: $tertiary;
     color: $tertiary-contrast;
   }
 
+  &.with-icon {
+    font-size: $font-size-icon;
+  }
+
+  &.muted {
+    background: $disabled-color;
+  }
+
   &.primary {
-    background: $primary;
-    color: $primary-contrast;
+    background: $primary-lighter;
+    color: $primary;
 
-    &:disabled{
-      background: $primary-lighter;
-      color: $primary;
-
+    &.selected {
+      background: $primary;
+      color: $primary-contrast;
     }
   }
 }
