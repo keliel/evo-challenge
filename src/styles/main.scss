@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-// import configuration from the theme builder
+// import configuration for custom variable values
+@import './variables/colors';
+@import './variables/font-sizes';
+@import './variables/spacings';
+
+// Base imports to be using custom variables from above
 @import '~@progress/kendo-theme-default/scss/functions/_index.scss';
 @import '~@progress/kendo-theme-default/scss/_variables.scss';
 @import '~@progress/kendo-theme-default/scss/mixins/_index.scss';
-@import './variables/colors';
-@import './variables/font-sizes';
-
 
 // Dependencies
 @import '~@progress/kendo-theme-default/scss/common/_index.scss';
@@ -16,6 +18,8 @@
 @import '~@progress/kendo-theme-default/scss/utils/_index.scss';
 @import '~@progress/kendo-theme-default/scss/typography/_index.scss';
 @import '~@progress/kendo-theme-default/scss/avatar/_index.scss';
+
+@import './variables/badge';
 @import '~@progress/kendo-theme-default/scss/badge/_index.scss';
 @import '~@progress/kendo-theme-default/scss/button/_index.scss';
 

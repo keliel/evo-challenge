@@ -27,7 +27,7 @@ kendo-appbar {
     right: auto;
     width: $nav-size-px;
     min-width: (100 / 1920 * $nav-size) + vw;
-    padding: $appbar-padding-x $appbar-padding-y;
+    padding: 0;
     box-shadow: 1px 0 1px rgba(0, 0, 0, 0.16);
   }
 
@@ -43,10 +43,26 @@ kendo-appbar {
   margin: 0;
 }
 
+kendo-badge {
+  font-weight: 500;
+}
+
 kendo-avatar {
   margin-left: $gutter-half;
 }
 
 .k-button {
   color: $icon-color;
+  border: none;
+  border-radius: 0;
+
+  .left-nav & {
+    height: $nav-size-px;
+    width: $nav-size-px;
+  }
+
+  &.tertiary {
+    background: $tertiary;
+    color: $tertiary-contrast;
+  }
 }
