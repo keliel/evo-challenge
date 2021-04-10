@@ -2,8 +2,8 @@
 @import '../styles/variables/spacings';
 @import '../styles/variables/colors';
 
-// Command interfaces
-@import '~@progress/kendo-theme-default/scss/appbar/index';
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
 
 $nav-size: 48;
 $nav-size-px: $nav-size + px;

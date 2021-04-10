@@ -18,10 +18,14 @@
 @import '~@progress/kendo-theme-default/scss/utils/_index.scss';
 @import '~@progress/kendo-theme-default/scss/typography/_index.scss';
 @import '~@progress/kendo-theme-default/scss/avatar/_index.scss';
-
 @import './variables/badge';
 @import '~@progress/kendo-theme-default/scss/badge/_index.scss';
+
+// Specific components
 @import '~@progress/kendo-theme-default/scss/button/_index.scss';
+@import '~@progress/kendo-theme-default/scss/appbar/index';
+@import '~@progress/kendo-theme-default/scss/treeview/index';
+
 
 html,
 body {
