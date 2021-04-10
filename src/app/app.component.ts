@@ -7,19 +7,18 @@ import { LeftHandNavItem } from './core/models/left-hand-nav-item';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.Emulated,
 })
 export class AppComponent {
   title = 'evo-challenge';
   avatar = 'assets/images/adult-beautiful-girl-blue.png';
 
   leftHandNav: LeftHandNavItem[] = [
-    { icon: faTachometerAlt, selected: false },
-    { icon: faBoxOpen, selected: false, hasUpdates: true },
-    { icon: faCoffee, selected: false, muted: true },
-    { icon: faUserShield, selected: true, hasUpdates: true },
-    { icon: faBookReader, selected: false },
-    { icon: faRoute, selected: false },
-    { icon: faClipboardCheck, selected: false },
+    { icon: faTachometerAlt, link: '/tacho' },
+    { icon: faBoxOpen, link: '/some-box', hasUpdates: true },
+    { icon: faCoffee, link: '/get-coffee-chat', muted: true },
+    { icon: faUserShield, link: '/form-designer', hasUpdates: true },
+    { icon: faBookReader, link: '/reader' },
+    { icon: faRoute, link: '/' },
+    { icon: faClipboardCheck, link: '/' },
   ];
 }

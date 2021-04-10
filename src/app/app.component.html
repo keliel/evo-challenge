@@ -27,7 +27,8 @@
   <ng-container *ngFor="let item of leftHandNav">
     <kendo-appbar-section>
       <button class="k-button with-icon"
-        [ngClass]="{'selected': item.selected, 'primary': item.hasUpdates, 'muted': item.muted}">
+        [ngClass]="{'primary': item.hasUpdates, 'muted': item.muted}"
+        [routerLink]="item.link" routerLinkActive="selected" >
         <fa-icon [icon]="item.icon"></fa-icon>
       </button>
     </kendo-appbar-section>

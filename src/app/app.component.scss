@@ -66,6 +66,9 @@ kendo-avatar {
   &:hover {
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.1);
   }
+  &:focus {
+    box-shadow: none;
+  }
 
   &.brand {
     background: $tertiary;
