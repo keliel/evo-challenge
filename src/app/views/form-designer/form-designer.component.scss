@@ -1,0 +1,132 @@
+@import '~src/styles/variables/font-sizes';
+@import '~src/styles/variables/spacings';
+@import '~src/styles/variables/colors';
+@import '~src/styles/variables/treeview';
+
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
+@import '~@progress/kendo-theme-default/scss/functions/colors';
+
+$bg-color-item: #f4f9fd;
+
+.action-list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.action-list {
+  width: 24%;
+  min-width: 432px;
+  min-height: calc(100vh - #{$nav-size-px});
+  background-color: $white;
+  padding: ($gutter-doubled + $gutter-half) $gutter-one-and-half;
+}
+
+.action-detail {
+  flex: 1;
+}
+
+.action-point {
+  &__icon {
+    font-size: $font-size-default;
+    margin-right: $gutter-quarter;
+  }
+
+  &--last {
+    margin-left: $gutter-one-and-three-quarters;
+  }
+}
+
+.k-treeview {
+  .k-i-expand,
+  .k-i-collapse {
+    margin-left: $gutter-base;
+    color: $primary;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: $font-size-small;
+  }
+
+  .k-i-expand:before {
+    content: '\f054'; // Hardcoded, should be replaced by variable from some official package
+  }
+
+  .k-i-collapse:before {
+    content: '\f078'; // Hardcoded, should be replaced by variable from some official package
+  }
+
+  .k-mid {
+    border-radius: $treeview-item-border-radius;
+  }
+
+  .k-in {
+    width: 100%;
+    cursor: pointer;
+
+    &.k-state-focused {
+      z-index: initial;
+    }
+  }
+}
+.k-item {
+  &[aria-level='1'] {
+    padding: 0;
+  }
+
+  &[aria-selected='true'] {
+    > .k-mid {
+      background-color: $primary !important;
+
+      > .k-icon {
+        color: $primary-contrast;
+      }
+    }
+  }
+
+  &[aria-level='1'] {
+    &:nth-child(even) {
+      > .k-mid {
+        background-color: $bg-color-item;
+      }
+
+      [aria-level='2'] {
+        &:nth-child(odd),
+        &:nth-child(even) {
+          [aria-level='3'] {
+            &:nth-child(even),
+            &:nth-child(odd) {
+              > .k-mid {
+                background-color: $bg-color-item;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      [aria-level='2'] {
+        &:nth-child(even),
+        &:nth-child(odd) {
+          > .k-mid {
+            background-color: $bg-color-item;
+          }
+
+          [aria-level='3'] {
+            &:nth-child(odd),
+            &:nth-child(even) {
+              [aria-level='4'] {
+                &:nth-child(even),
+                &:nth-child(odd) {
+                  > .k-mid {
+                    background-color: $bg-color-item;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

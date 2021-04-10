@@ -2,11 +2,8 @@
 @import '../styles/variables/spacings';
 @import '../styles/variables/colors';
 
-// Command interfaces
-@import '~@progress/kendo-theme-default/scss/appbar/index';
-
-$nav-size: 48;
-$nav-size-px: $nav-size + px;
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
 
 main {
   background-color: $bg-color-inner;
@@ -15,7 +12,6 @@ main {
 
 .avoid-left-nav {
   left: $nav-size-px;
-  max-width: calc(100% - #{$nav-size-px});
 }
 
 kendo-appbar {

@@ -1,2 +1,20 @@
-<p>form-designer works!</p>
-<router-outlet></router-outlet>
+<div class="action-list-wrapper">
+  <aside class="action-list">
+    <kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
+                    kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding
+                    [isDisabled]="isNodeDisabled" (selectionChange)="navigateToNodeDetails($event)">
+      <ng-template kendoTreeViewNodeTemplate let-item>
+        <div class="action-point"
+             [ngClass]="{'action-point--last': !item.subactions || !item.subactions.length}">
+          <fa-icon *ngIf="displayExtraIcon(item)" class="action-point__icon"
+                   [icon]="getTypeIcon(item)" [style]="{color: getTypeColor(item)}">
+          </fa-icon>
+          {{ item.title }}
+        </div>
+      </ng-template>
+    </kendo-treeview>
+  </aside>
+  <main class="action-detail">
+    <router-outlet></router-outlet>
+  </main>
+</div>

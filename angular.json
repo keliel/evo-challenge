@@ -34,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/scss-reset/_reset.scss",
               "src/styles/fonts/fonts.scss",
               "src/styles/main.scss"
             ],
