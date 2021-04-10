@@ -3,6 +3,7 @@ import { ActionListService } from '../../services/action-list.service';
 import { faClipboardList, faCodeBranch, faDotCircle, faFlag, faLock, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { ActionPointType } from '../../core/models/action-point-type.enum';
 import { ActionPoint } from '../../core/models/action-point';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   templateUrl: './form-designer.component.html',
@@ -13,7 +14,11 @@ export class FormDesignerComponent {
 
   actionPoints$ = this.actionListService.loadActionPoints();
 
-  constructor(private readonly actionListService: ActionListService) { }
+  constructor(
+    private readonly router: Router,
+    private readonly route: ActivatedRoute,
+    private readonly actionListService: ActionListService
+  ) { }
 
   displayExtraIcon(item: ActionPoint): boolean {
     return item.secured || item.type !== undefined;
@@ -52,6 +57,10 @@ export class FormDesignerComponent {
 
   isNodeDisabled(item: any): boolean {
     return !!item.secured;
+  }
+
+  navigateToNodeDetails({ dataItem }: { dataItem: ActionPoint }): void {
+    this.router.navigate([dataItem.id], { relativeTo: this.route });
   }
 
 }

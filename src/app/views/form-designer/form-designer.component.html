@@ -1,7 +1,7 @@
 <aside class="action-list-wrapper">
   <kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
                   kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding
-                  [isDisabled]="isNodeDisabled">
+                  [isDisabled]="isNodeDisabled" (selectionChange)="navigateToNodeDetails($event)">
     <ng-template kendoTreeViewNodeTemplate let-item>
       <div class="action-point"
            [ngClass]="{'action-point--last': !item.subactions || !item.subactions.length}">
