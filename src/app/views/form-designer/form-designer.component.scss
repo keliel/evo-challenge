@@ -10,11 +10,20 @@
 $bg-color-item: #f4f9fd;
 
 .action-list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.action-list {
   width: 24%;
   min-width: 432px;
   min-height: calc(100vh - #{$nav-size-px});
   background-color: $white;
   padding: ($gutter-doubled + $gutter-half) $gutter-one-and-half;
+}
+
+.action-detail {
+  flex: 1;
 }
 
 .action-point {
@@ -54,7 +63,7 @@ $bg-color-item: #f4f9fd;
     width: 100%;
     cursor: pointer;
 
-    &.k-state-focused{
+    &.k-state-focused {
       z-index: initial;
     }
   }
