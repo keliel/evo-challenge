@@ -10,6 +10,7 @@
 .action-list-wrapper {
   width: 24%;
   min-width: 432px;
+  min-height: calc(100vh - #{$nav-size-px});
   background-color: $white;
   padding: ($gutter-doubled + $gutter-half) $gutter-one-and-half;
 }
@@ -27,7 +28,7 @@
 .k-treeview {
   .k-i-expand,
   .k-i-collapse {
-    margin-left: $gutter-half;
+    margin-left: $gutter-base;
   }
 
   .k-mid {

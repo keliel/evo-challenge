@@ -37,7 +37,9 @@
     "@progress/kendo-licensing": "^1.1.1",
     "@progress/kendo-theme-default": "latest",
     "rxjs": "~6.6.0",
+    "scss-reset": "^1.1.11",
     "tslib": "^2.0.0",
+    "uuid": "^8.3.2",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
@@ -46,6 +48,7 @@
     "@angular/compiler-cli": "~11.2.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "@types/uuid": "^8.3.0",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

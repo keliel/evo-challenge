@@ -2,7 +2,7 @@
 @import 'font-sizes';
 
 $treeview-item-padding-x: $gutter-half;
-$treeview-item-padding-y: $gutter-half;
+$treeview-item-padding-y: $gutter-quarter * 1.5;
 $treeview-font-size: $font-size-medium;
 $treeview-item-border-radius: 2px;
 $treeview-indent: $gutter-half;
