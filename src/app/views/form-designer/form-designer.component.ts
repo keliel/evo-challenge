@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionListService } from '../../services/action-list.service';
 
 @Component({
   templateUrl: './form-designer.component.html',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormDesignerComponent implements OnInit {
 
-  constructor() { }
+  actionPoints$ = this.actionListService.loadActionPoints();
+
+  constructor(private readonly actionListService: ActionListService) { }
 
   ngOnInit(): void {
   }
