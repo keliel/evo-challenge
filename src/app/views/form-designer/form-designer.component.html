@@ -2,8 +2,8 @@
   <kendo-treeview [nodes]="actionPoints$ | async" textField="title" childrenField="subactions"
                   kendoTreeViewExpandable kendoTreeViewSelectable kendoTreeViewHierarchyBinding>
     <ng-template kendoTreeViewNodeTemplate let-item>
-      <div [ngClass]="{'last-item': !item.subactions || !item.subactions.length}">
-        <fa-icon *ngIf="item.type !== undefined" class="action-type-icon"
+      <div class="action-point" [ngClass]="{'action-point--last': !item.subactions || !item.subactions.length}">
+        <fa-icon *ngIf="item.type !== undefined" class="action-point__icon"
                  [icon]="getTypeIcon(item.type)" [style]="{color: getTypeColor(item.type)}">
         </fa-icon>
         {{ item.title }}
