@@ -5,6 +5,39 @@
 // Command interfaces
 @import '~@progress/kendo-theme-default/scss/appbar/index';
 
+$nav-size: 48;
+$nav-size-px: $nav-size + px;
+
+main {
+  background-color: $bg-color-inner;
+  padding: $nav-size-px 0 0 $nav-size-px;
+}
+
+.avoid-left-nav {
+  left: $nav-size-px;
+  max-width: calc(100% - #{$nav-size-px});
+}
+
+kendo-appbar {
+  &.left-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 0;
+    right: auto;
+    width: $nav-size-px;
+    min-width: (100 / 1920 * $nav-size) + vw;
+    padding: $appbar-padding-x $appbar-padding-y;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.16);
+  }
+
+  &.top-nav {
+    width: calc(100% - #{$nav-size-px});
+    height: $nav-size-px;
+    min-height: (100 / 1080 * $nav-size) + vh;
+  }
+}
+
 .title {
   font-size: $font-size-medium;
   margin: 0;
