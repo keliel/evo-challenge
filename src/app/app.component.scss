@@ -28,6 +28,7 @@ kendo-appbar {
     width: $nav-size-px;
     min-width: (100 / 1920 * $nav-size) + vw;
     padding: 0;
+    gap: 0;
     box-shadow: 1px 0 1px rgba(0, 0, 0, 0.16);
   }
 
@@ -55,14 +56,30 @@ kendo-avatar {
   color: $icon-color;
   border: none;
   border-radius: 0;
+  background: transparent;
 
   .left-nav & {
     height: $nav-size-px;
     width: $nav-size-px;
   }
 
+  &:disabled {
+    background: $disabled-color;
+  }
+
   &.tertiary {
     background: $tertiary;
     color: $tertiary-contrast;
+  }
+
+  &.primary {
+    background: $primary;
+    color: $primary-contrast;
+
+    &:disabled{
+      background: $primary-lighter;
+      color: $primary;
+
+    }
   }
 }
