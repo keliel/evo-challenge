@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { faBookReader, faBoxOpen, faClipboardCheck, faCoffee, faRoute, faTachometerAlt, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faBookReader, faBoxOpen, faClipboardCheck, faCoffee, faRoute, faTachometerAlt, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { LeftHandNavItem } from './core/models/left-hand-nav-item';
 
 @Component({
@@ -10,6 +10,7 @@ import { LeftHandNavItem } from './core/models/left-hand-nav-item';
 })
 export class AppComponent {
   title = 'evo-challenge';
+  notificationIcon = faBell;
   avatar = 'assets/images/adult-beautiful-girl-blue.png';
 
   leftHandNav: LeftHandNavItem[] = [
