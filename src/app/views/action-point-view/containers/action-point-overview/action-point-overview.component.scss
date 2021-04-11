@@ -1,0 +1,36 @@
+@import '~src/styles/variables/spacings';
+@import '~src/styles/variables/colors';
+
+$tile-design-height: 128px;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0px;
+  padding-bottom: $main-content-padding;
+  padding-right: $gutter-quarter;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $lightest-grey $off-white;
+
+  &::-webkit-scrollbar {
+    width: $gutter-quarter;
+    background-color: $off-white;
+    border-radius: $gutter-quarter;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $lightest-grey;
+    border-radius: $gutter-quarter;
+  }
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, minmax($tile-design-height, auto));
+  margin: -$gutter-quarter;
+
+  &__tile {
+    padding: $gutter-quarter;
+  }
+}
