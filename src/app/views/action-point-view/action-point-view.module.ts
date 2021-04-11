@@ -18,6 +18,6 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     ActionPointViewRoutingModule,
     FontAwesomeModule,
     ButtonsModule,
-  ]
+  ],
 })
 export class ActionPointViewModule { }
