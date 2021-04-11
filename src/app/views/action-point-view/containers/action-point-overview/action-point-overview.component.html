@@ -1,1 +1,9 @@
-<app-overview-tile title="Test"></app-overview-tile>
+<div class="tiles">
+  <ng-container *ngFor="let tile of tiles">
+    <app-overview-tile class="tiles__tile" [ngClass]="tile.gridClass" [title]="tile.title"
+                       [counter]="tile.counter" [isExpandable]="tile.isExpandable"
+                       [titleDarkness]="tile.titleDarkness">
+      Some content
+    </app-overview-tile>
+  </ng-container>
+</div>
