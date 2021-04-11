@@ -9,7 +9,7 @@
           <fa-icon *ngIf="displayExtraIcon(item)" class="action-point__icon"
                    [icon]="getTypeIcon(item)" [style]="{color: getTypeColor(item)}">
           </fa-icon>
-          {{ item.title }}
+          <span class="action-point__text">{{ item.title }}</span>
         </div>
       </ng-template>
     </kendo-treeview>

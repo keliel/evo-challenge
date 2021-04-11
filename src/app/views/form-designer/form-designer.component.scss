@@ -15,11 +15,11 @@ $bg-color-item: #f4f9fd;
 }
 
 .action-list {
-  width: 24%;
-  min-width: 432px;
+  width: 25%;
+  min-width: 400px;
   min-height: calc(100vh - #{$nav-size-px});
   background-color: $white;
-  padding: ($gutter-doubled + $gutter-half) $gutter-one-and-half;
+  padding: ($gutter-doubled + $gutter-half) $gutter-one-and-quarter;
 }
 
 .action-detail {
@@ -27,6 +27,16 @@ $bg-color-item: #f4f9fd;
 }
 
 .action-point {
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &__icon {
     font-size: $font-size-default;
     margin-right: $gutter-quarter;
@@ -60,7 +70,8 @@ $bg-color-item: #f4f9fd;
   }
 
   .k-in {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     cursor: pointer;
 
     &.k-state-focused {
@@ -84,7 +95,7 @@ $bg-color-item: #f4f9fd;
   }
 
   &[aria-level='1'] {
-    &:nth-child(even) {
+    &:nth-child(odd) {
       > .k-mid {
         background-color: $bg-color-item;
       }
@@ -104,7 +115,7 @@ $bg-color-item: #f4f9fd;
       }
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       [aria-level='2'] {
         &:nth-child(even),
         &:nth-child(odd) {
