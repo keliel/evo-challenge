@@ -1,12 +1,14 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+
 import { faExpand } from '@fortawesome/free-solid-svg-icons';
+
 import { CounterConfig } from '../../models/counter-config';
 
 @Component({
   selector: 'app-overview-tile',
   templateUrl: './overview-tile.component.html',
   styleUrls: ['./overview-tile.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OverviewTileComponent implements OnInit {
   @Input() isExpandable = false;

@@ -40,6 +40,5 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "fullTemplateTypeCheck": true,
   }
 }

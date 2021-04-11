@@ -20,6 +20,6 @@ import { ActionPointOverviewComponent } from './containers/action-point-overview
     UiModule,
     FontAwesomeModule,
     ButtonsModule,
-  ]
+  ],
 })
 export class ActionPointViewModule { }
