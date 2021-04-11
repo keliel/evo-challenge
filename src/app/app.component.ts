@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 
-import { faBell, faBookReader, faBoxOpen, faClipboardCheck, faCoffee, faRoute, faTachometerAlt, faUserShield } from '@fortawesome/free-solid-svg-icons';
-import { LeftHandNavItem } from './core/models/left-hand-nav-item';
+import { faBell, faBookReader, faBoxOpen, faClipboardCheck, faCoffee, faRoute, faTachometerAlt, faUserShield, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
+interface LeftHandNavItem {
+  icon: IconDefinition;
+  link: string;
+  muted?: boolean;
+  hasUpdates?: boolean;
+}
 
 @Component({
   selector: 'app-root',
