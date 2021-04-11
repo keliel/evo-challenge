@@ -1,0 +1,21 @@
+<div class="card">
+  <header class="card__top" *ngIf="title">
+    <h3 class="card__title">
+      {{ title }}
+    </h3>
+
+    <kendo-badge-container class="card__badge" *ngIf="counter">
+      <kendo-badge shape="rounded" themeColor="secondary" size="medium">
+        <fa-icon [icon]="counter.icon" size="sm"></fa-icon>
+        {{ counter.value }}
+      </kendo-badge>
+    </kendo-badge-container>
+
+    <button class="k-button k-button-clear k-button-icon" *ngIf="isExpandable">
+      <fa-icon class="card__expand" [icon]="expandIcon"></fa-icon>
+    </button>
+  </header>
+  <div class="card__body">
+    <ng-content></ng-content>
+  </div>
+</div>
