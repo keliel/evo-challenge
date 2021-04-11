@@ -1,6 +1,10 @@
 @import '~src/styles/variables/colors';
 @import '~src/styles/variables/font-sizes';
 @import '~src/styles/variables/spacings';
+@import '~src/styles/variables/button';
+
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
 
 .ap-container {
   padding: $gutter-one-and-half;
@@ -34,6 +38,48 @@
     .k-button-icon {
       font-size: $font-size-icon * 0.5;
       color: $icon-color;
+    }
+  }
+}
+
+.ap-tabs {
+  padding: $gutter-base 0;
+
+  &__group {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: $secondary;
+    border-radius: $button-border-radius * 2;
+  }
+
+  .k-button-group {
+    &.icons {
+      .k-button {
+        padding: $gutter-quarter $gutter-half;
+      }
+    }
+  }
+
+  .k-button {
+    border: none;
+    border-radius: $button-border-radius;
+    padding-left: $gutter-base;
+    padding-right: $gutter-base;
+    color: rgba($secondary-contrast, 0.9);
+    font-weight: bold;
+
+    &:hover {
+      background-color: rgba($primary, 0.5);
+    }
+
+    &.k-state-active {
+      background-color: $primary;
+      color: $secondary-contrast;
+    }
+
+    fa-icon {
+      font-size: $font-size-icon;
     }
   }
 }

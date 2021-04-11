@@ -19,5 +19,26 @@
       </button>
     </section>
   </header>
+  <nav class="ap-tabs">
+    <div class="ap-tabs__group">
+      <kendo-buttongroup selection="single" look="outline" class="categories">
+        <button kendoButton [toggleable]="true">Overview</button>
+        <button kendoButton [toggleable]="true">Financials</button>
+        <button kendoButton [toggleable]="true">Resources</button>
+        <button kendoButton [toggleable]="true">Risks</button>
+        <button kendoButton [toggleable]="true">Board</button>
+        <button kendoButton [toggleable]="true">Attachments</button>
+      </kendo-buttongroup>
+
+      <kendo-buttongroup selection="single" look="outline" class="icons">
+        <button kendoButton [toggleable]="true">
+          <fa-icon [icon]="stonksIcon"></fa-icon>
+        </button>
+        <button kendoButton [toggleable]="true">
+          <fa-icon [icon]="historyIcon"></fa-icon>
+        </button>
+      </kendo-buttongroup>
+    </div>
+  </nav>
   <router-outlet></router-outlet>
 </div>
