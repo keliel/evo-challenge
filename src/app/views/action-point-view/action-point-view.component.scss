@@ -50,7 +50,7 @@
     align-items: stretch;
     justify-content: space-between;
     background-color: $secondary;
-    border-radius: $button-border-radius * 2;
+    border-radius: $border-radius-lg;
   }
 
   .k-button-group {
@@ -63,7 +63,7 @@
 
   .k-button {
     border: none;
-    border-radius: $button-border-radius;
+    border-radius: $border-radius;
     padding-left: $gutter-base;
     padding-right: $gutter-base;
     color: rgba($secondary-contrast, 0.9);
@@ -76,6 +76,7 @@
     &.k-state-active {
       background-color: $primary;
       color: $secondary-contrast;
+      z-index: initial;
     }
 
     fa-icon {
