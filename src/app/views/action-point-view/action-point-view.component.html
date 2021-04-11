@@ -1,2 +1,44 @@
-<p>{{actionPoint?.title}}</p>
-<router-outlet></router-outlet>
+<div *ngIf="actionPoint" class="ap-container">
+  <header class="ap-titlebar">
+    <h1>
+      <span>{{actionPoint?.title}}</span>
+      <fa-icon [icon]="dotIcon"></fa-icon>
+    </h1>
+    <section class="ap-toolbar">
+      <button class="k-button k-button-clear k-button-icon">
+        <fa-icon [icon]="revertIcon" size="2x"></fa-icon>
+      </button>
+      <button class="k-button k-button-clear k-button-icon">
+        <fa-icon [icon]="redoIcon" size="2x"></fa-icon>
+      </button>
+      <button kendoButton [primary]="true" class="ap-toolbar__save">
+        Save Thing
+      </button>
+      <button class="k-button k-button-clear k-button-icon">
+        <fa-icon [icon]="fullscreenIcon" size="3x"></fa-icon>
+      </button>
+    </section>
+  </header>
+  <nav class="ap-tabs">
+    <div class="ap-tabs__group">
+      <kendo-buttongroup selection="single" look="outline" class="categories">
+        <button kendoButton [toggleable]="true" [selected]="true">Overview</button>
+        <button kendoButton [toggleable]="true">Financials</button>
+        <button kendoButton [toggleable]="true">Resources</button>
+        <button kendoButton [toggleable]="true">Risks</button>
+        <button kendoButton [toggleable]="true">Board</button>
+        <button kendoButton [toggleable]="true">Attachments</button>
+      </kendo-buttongroup>
+
+      <kendo-buttongroup selection="single" look="outline" class="icons">
+        <button kendoButton [toggleable]="true" [selected]="true">
+          <fa-icon [icon]="stonksIcon"></fa-icon>
+        </button>
+        <button kendoButton [toggleable]="true">
+          <fa-icon [icon]="historyIcon"></fa-icon>
+        </button>
+      </kendo-buttongroup>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

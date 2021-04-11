@@ -22,6 +22,7 @@
 @import '~@progress/kendo-theme-default/scss/badge/_index.scss';
 
 // Specific components
+@import './variables/button';
 @import '~@progress/kendo-theme-default/scss/button/_index.scss';
 @import '~@progress/kendo-theme-default/scss/appbar/index';
 @import './variables/treeview';
