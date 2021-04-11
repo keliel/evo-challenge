@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ActionPoint } from '../../core/models/action-point';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { faEllipsisH, faExpand, faRedoAlt, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-action-point-view',
@@ -13,6 +14,10 @@ export class ActionPointViewComponent implements OnInit, OnDestroy {
   private readonly unsubscribe = new Subject();
 
   actionPoint: ActionPoint | undefined;
+  dotIcon = faEllipsisH;
+  revertIcon = faUndoAlt;
+  redoIcon = faRedoAlt;
+  fullscreenIcon = faExpand;
 
   constructor(private readonly router: Router, private readonly route: ActivatedRoute) { }
 
