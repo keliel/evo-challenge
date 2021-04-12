@@ -24,7 +24,7 @@
     align-items: center;
     flex-grow: 0;
     flex-shrink: 1;
-    padding: $gutter-three-quarters $gutter-base $gutter-half;
+    padding: $gutter-three-quarters $gutter-one-and-three-quarters * 0.5 $gutter-half;
   }
 
   &__title {

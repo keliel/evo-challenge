@@ -25,9 +25,10 @@ $tile-design-height: 128px;
 }
 
 .tiles {
+  flex: 1 1 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, minmax($tile-design-height, auto));
+  grid-template-rows: repeat(5, $tile-design-height);
   margin: -$gutter-quarter;
 
   &__tile {
