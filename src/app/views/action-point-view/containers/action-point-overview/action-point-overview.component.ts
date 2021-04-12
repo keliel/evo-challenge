@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 import { faCodeBranch, faComments, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { DarknessLevel } from '@shared/ui/models/darkness-level.enum';
 import { OverviewTileComponentConfig } from '@shared/ui/models/overview-tile-component-config';
 
+// TODO: Would really prefer to write a dynamic component class loader, if time allowed.
+type TileComponent = 'banner' | 'owner';
+
 interface OverviewTileConfig extends OverviewTileComponentConfig {
   gridClass?: string;
+  component?: TileComponent;
 }
 
 @Component({
   templateUrl: './action-point-overview.component.html',
-  styleUrls: ['./action-point-overview.component.scss']
+  styleUrls: ['./action-point-overview.component.scss'],
 })
 export class ActionPointOverviewComponent implements OnInit {
   tiles: OverviewTileConfig[] = [
-    { gridClass: 'k-col-start-1 k-colspan-4 k-rowspan-2' },
+    { gridClass: 'k-col-start-1 k-colspan-4 k-rowspan-2', component: 'banner' },
     { gridClass: 'k-col-start-5 k-col-end-7 k-rowspan-1', title: 'Owner' },
     { gridClass: 'k-col-start-7 k-col-end-9 k-rowspan-2', title: 'Team' },
     {
@@ -50,6 +54,7 @@ export class ActionPointOverviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

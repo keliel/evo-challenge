@@ -3,7 +3,10 @@
     <app-overview-tile class="tiles__tile" [ngClass]="tile.gridClass" [title]="tile.title"
                        [counter]="tile.counter" [isExpandable]="tile.isExpandable"
                        [titleDarkness]="tile.titleDarkness">
-      Some content
+      <ng-container [ngSwitch]="tile.component">
+        <app-banner *ngSwitchCase="'banner'" imageSrc="assets/images/banner.png">
+        </app-banner>
+      </ng-container>
     </app-overview-tile>
   </ng-container>
 </div>
