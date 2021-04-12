@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ProgressBarModule } from '@progress/kendo-angular-progressbar';
 import { UiModule } from '@shared/ui/ui.module';
 
 import { ActionPointViewRoutingModule } from './action-point-view-routing.module';
@@ -26,6 +27,7 @@ import { ActionPointOverviewComponent } from './containers/action-point-overview
     FontAwesomeModule,
     ButtonsModule,
     GridModule,
+    ProgressBarModule,
   ],
 })
 export class ActionPointViewModule { }
