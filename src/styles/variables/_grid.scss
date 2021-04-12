@@ -1,0 +1,16 @@
+@import 'spacings';
+@import 'font-sizes';
+@import 'colors';
+@import '~@progress/kendo-theme-default/scss/_variables.scss';
+
+$grid-header-padding-x: 0;
+$grid-border-width: 0;
+$grid-header-bg: transparent;
+$grid-header-text: $grey;
+$grid-header-bg: $white;
+$grid-bg: $off-white;
+$grid-alt-bg: $white;
+$grid-cell-vertical-border-width: 0;
+$grid-border: transparent;
+$grid-padding-x: $gutter-half;
+$grid-padding-y: $gutter-three-quarters * 0.5;
