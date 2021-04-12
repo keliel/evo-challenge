@@ -6,8 +6,6 @@ import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 
 import { OverviewTileComponent } from './components/overview-tile/overview-tile.component';
 
-
-
 @NgModule({
   imports: [
     CommonModule,

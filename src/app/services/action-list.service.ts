@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { v1 as uuid } from 'uuid';
+
 import { ActionPointType } from '../core/models/action-point-type.enum';
 
+import { v1 as uuid } from 'uuid';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ActionListService {
 
-  private actionPointList = [
+  private readonly actionPointList = [
     {
       id: uuid(),
       title: 'Visualize impactful mindshare',
@@ -16,7 +18,7 @@ export class ActionListService {
         id: uuid(),
         title: 'Monetize B2B portals',
         type: ActionPointType.Goal,
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -24,7 +26,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -32,7 +34,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -50,9 +52,9 @@ export class ActionListService {
             id: uuid(),
             title: 'Architect ubiquitous deliverables',
             type: ActionPointType.Task,
-          }]
-        }]
-      }]
+          }],
+        }],
+      }],
     },
     {
       id: uuid(),
@@ -60,7 +62,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -68,7 +70,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -76,7 +78,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -84,7 +86,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -92,7 +94,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -100,7 +102,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -109,7 +111,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -117,7 +119,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -125,7 +127,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -133,7 +135,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -141,7 +143,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -149,7 +151,7 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
     {
       id: uuid(),
@@ -157,12 +159,9 @@ export class ActionListService {
       subactions: [{
         id: uuid(),
         title: 'Something hidden',
-      }]
+      }],
     },
   ];
-
-  constructor() { }
-
 
   loadActionPoints(): Observable<any> {
     return of(this.actionPointList);

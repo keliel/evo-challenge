@@ -1,9 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ActionListService } from '../../services/action-list.service';
-import { faClipboardList, faCodeBranch, faDotCircle, faFlag, faLock, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { ActionPointType } from '../../core/models/action-point-type.enum';
-import { ActionPoint } from '../../core/models/action-point';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { faClipboardList, faCodeBranch, faDotCircle, faFlag, faLock, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
+import { ActionPoint } from '../../core/models/action-point';
+import { ActionPointType } from '../../core/models/action-point-type.enum';
+import { ActionListService } from '../../services/action-list.service';
 
 @Component({
   templateUrl: './form-designer.component.html',

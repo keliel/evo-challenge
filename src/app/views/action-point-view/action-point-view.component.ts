@@ -1,9 +1,11 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { ActionPoint } from '../../core/models/action-point';
-import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
+
 import { faChartLine, faEllipsisH, faExpand, faHistory, faRedoAlt, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
+
+import { ActionPoint } from '../../core/models/action-point';
 
 @Component({
   selector: 'app-action-point-view',
