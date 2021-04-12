@@ -5,7 +5,7 @@ import { DarknessLevel } from '@shared/ui/models/darkness-level.enum';
 import { OverviewTileComponentConfig } from '@shared/ui/models/overview-tile-component-config';
 
 // TODO: Would really prefer to write a dynamic component class loader, if time allowed.
-type TileComponent = 'banner' | 'owner';
+type TileComponent = 'banner' | 'owner' | 'key-results';
 
 interface OverviewTileConfig extends OverviewTileComponentConfig {
   gridClass?: string;
@@ -43,6 +43,7 @@ export class ActionPointOverviewComponent implements OnInit {
       titleDarkness: DarknessLevel.Black,
       counter: { value: 350, icon: faCodeBranch, iconRotation: 90 },
       isExpandable: true,
+      component: 'key-results',
     },
     {
       gridClass: 'k-col-start-1 k-colspan-4 k-rowspan-1',
