@@ -28,7 +28,6 @@
 @import './variables/treeview';
 @import '~@progress/kendo-theme-default/scss/treeview/index';
 
-
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -40,4 +39,19 @@ html {
 
 body {
   margin: 0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $lightest-grey $off-white;
+
+  &::-webkit-scrollbar {
+    width: $gutter-quarter;
+    background-color: $off-white;
+    border-radius: $gutter-quarter;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $lightest-grey;
+    border-radius: $gutter-quarter;
+  }
 }
