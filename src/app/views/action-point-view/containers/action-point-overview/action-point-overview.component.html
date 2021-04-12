@@ -6,6 +6,8 @@
       <ng-container [ngSwitch]="tile.component">
         <app-banner *ngSwitchCase="'banner'" imageSrc="assets/images/banner.png">
         </app-banner>
+        <app-key-result-list *ngSwitchCase="'key-results'">
+        </app-key-result-list>
       </ng-container>
     </app-overview-tile>
   </ng-container>

@@ -1,0 +1,22 @@
+<kendo-grid [data]="keyResults$ | async" height="100%">
+  <kendo-grid-column field="text" title="Key Results">
+    <ng-template kendoGridHeaderTemplate let-column>
+      <h4 class="grid-header">
+        {{ column.title }}
+      </h4>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="progress" title="Progress" width="120">
+    <ng-template kendoGridHeaderTemplate let-column>
+      <h4 class="grid-header">
+        {{ column.title }}
+      </h4>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="progress-bar">
+        <kendo-progressbar [value]="dataItem.progress" [max]="1" [label]="false"></kendo-progressbar>
+        <span class="progress-bar__text">{{ dataItem.progress | percent}}</span>
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
