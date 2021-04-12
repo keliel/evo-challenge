@@ -1,7 +1,3 @@
-
-$nav-size: 48;
-$nav-size-px: $nav-size + px;
-
 // Own spacing system
 $gutter-base: 1.6rem;
 $gutter-quarter: $gutter-base * 0.25;
@@ -11,3 +7,9 @@ $gutter-one-and-quarter: $gutter-base * 1.25;
 $gutter-one-and-half: $gutter-base * 1.5;
 $gutter-one-and-three-quarters: $gutter-base * 1.75;
 $gutter-doubled: $gutter-base * 2;
+
+// Custom size values
+$nav-size: 48;
+$nav-size-px: $nav-size + px;
+
+$main-content-padding: $gutter-one-and-half;

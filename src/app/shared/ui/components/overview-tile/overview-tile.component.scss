@@ -1,0 +1,82 @@
+@import '~src/styles/variables/font-sizes';
+@import '~src/styles/variables/colors';
+@import '~src/styles/variables/spacings';
+
+// Variables from KendoUI Theme
+@import '~@progress/kendo-theme-default/scss/variables';
+
+:host {
+  display: block;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: 0 2px 5px $lightest-grey;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: $gutter-three-quarters $gutter-one-and-three-quarters * 0.5 $gutter-half;
+  }
+
+  &__title {
+    font-size: $font-size-default;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $grey;
+
+    &--black {
+      color: $black;
+    }
+    &--dark {
+      color: $base-text;
+    }
+    &--grey {
+      color: $grey;
+    }
+    &--light {
+      color: $light-grey;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-left: $gutter-quarter;
+    margin-right: $gutter-three-quarters;
+
+    kendo-badge {
+      font-weight: 500;
+
+      &.k-badge-edge {
+        position: initial;
+        z-index: initial;
+        transform: none;
+      }
+    }
+
+    fa-icon {
+      margin-right: $gutter-quarter;
+    }
+  }
+
+  &__expand {
+    margin-left: auto;
+    font-size: $font-size-default * 0.5;
+    color: $icon-color;
+  }
+
+  &__body {
+    flex: 1;
+    min-height: 0;
+    padding: $gutter-half $gutter-base $gutter-base;
+  }
+}

@@ -2,12 +2,17 @@
 $base-text: #495365;
 $text-color: $base-text;
 $primary: #31c0fc;
-$primary-lighter: #D4F2FF;
+$primary-lighter: #d4f2ff;
 $secondary: #596396;
 $tertiary: #7a66ca;
-$disabled-opacity: .3;
+$info: #537bcc;
+$disabled-opacity: 0.3;
 
 // Own colors
-$icon-color: #80899B;
+$grey: #80899b;
+$light-grey: #97afb9;
+$lightest-grey: #d0d3dd;
+$off-white: #f4f9fd;
+$icon-color: $grey;
 $bg-color-inner: #eaf0f8;
-$disabled-color: #D0D3DD;
+$disabled-color: $lightest-grey;

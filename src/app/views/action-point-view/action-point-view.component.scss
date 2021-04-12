@@ -6,8 +6,17 @@
 // Variables from KendoUI Theme
 @import '~@progress/kendo-theme-default/scss/variables';
 
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .ap-container {
-  padding: $gutter-one-and-half;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: $main-content-padding $main-content-padding 0;
 }
 
 .ap-titlebar {
@@ -50,7 +59,7 @@
     align-items: stretch;
     justify-content: space-between;
     background-color: $secondary;
-    border-radius: $button-border-radius * 2;
+    border-radius: $border-radius-lg;
   }
 
   .k-button-group {
@@ -63,7 +72,7 @@
 
   .k-button {
     border: none;
-    border-radius: $button-border-radius;
+    border-radius: $border-radius;
     padding-left: $gutter-base;
     padding-right: $gutter-base;
     color: rgba($secondary-contrast, 0.9);
@@ -76,6 +85,7 @@
     &.k-state-active {
       background-color: $primary;
       color: $secondary-contrast;
+      z-index: initial;
     }
 
     fa-icon {
