@@ -4,5 +4,9 @@ $font-size-medium: 1.5rem;
 $font-size-large: 1.8rem;
 $font-size-icon: 1.6rem;
 
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
 // Overrides for KendoUI
-$font-size: $font-size-default;
+$font-size: strip-unit($font-size-default) * 10px;

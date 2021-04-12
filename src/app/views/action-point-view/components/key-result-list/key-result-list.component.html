@@ -1,1 +1,9 @@
-<p *ngFor="let result of keyResults$ | async">{{ result.text }}</p>
+<kendo-grid [data]="keyResults$ | async" height="100%">
+  <kendo-grid-column field="text" title="Key Results">
+  </kendo-grid-column>
+  <kendo-grid-column field="progress" title="Progress" width="150">
+    <!-- <ng-template kendoGridCellTemplate let-dataItem>
+
+    </ng-template> -->
+  </kendo-grid-column>
+</kendo-grid>
